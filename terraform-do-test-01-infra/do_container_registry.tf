@@ -8,10 +8,10 @@ resource "digitalocean_container_registry" "do_docker_container_registry" {
   region                 = var.do_region_slug_prefix
 }
 
-output "do_docker_container_registry_name" {
-  value = digitalocean_container_registry.do_docker_container_registry.name
+output "do_docker_container_registry_endpoint" {
+  value = digitalocean_container_registry.do_docker_container_registry.endpoint
 }
 
-output "do_docker_container_registry_url" {
-  value = digitalocean_container_registry.do_docker_container_registry.server_url
+output "do_docker_container_registry_name" {
+  value = digitalocean_container_registry.do_docker_container_registry.name
 }
