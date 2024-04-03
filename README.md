@@ -4,8 +4,13 @@ Terraform 1.5.7
 
 ## Usage
 
-1. Generate Digital Ocean (DO) Access Token
-2. Paste your DO access token to terminal
+1. Generate Digital Ocean (DO) and CircleCI Access Tokens
+2. Paste your CircleCI access token to terminal
+   ```bash
+   read -s CIRCLE_TOKEN
+   export CIRCLE_TOKEN
+    ```
+3. Paste your DO access token to terminal
     ```bash
    read -s DIGITALOCEAN_ACCESS_TOKEN
    export DIGITALOCEAN_ACCESS_TOKEN
@@ -21,6 +26,10 @@ Terraform 1.5.7
    # Validate TF deployment
    terraform validate
    
-   # Apply TF code
+   # Apply TF code:
+   # "01-infra"
    terraform apply
+   
+   # "05-provision"
+    terraform apply -var digitalocean_registry_access_token=$DIGITALOCEAN_ACCESS_TOKEN
     ```
