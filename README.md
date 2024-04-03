@@ -15,7 +15,7 @@ Terraform 1.5.7
    read -s DIGITALOCEAN_ACCESS_TOKEN
    export DIGITALOCEAN_ACCESS_TOKEN
     ```
-2. Run the commands
+4. Run the commands
     ```bash
    # Format the TF code
    terraform fmt
@@ -33,3 +33,9 @@ Terraform 1.5.7
    # "05-provision"
     terraform apply -var digitalocean_registry_access_token=$DIGITALOCEAN_ACCESS_TOKEN
     ```
+5. Run CircleCI pipeline (to push image to DOCR created in "01-infra")
+6. Run the commands
+    ```bash
+   # Apply TF code:
+   # "07-do-provision"
+   terraform apply
